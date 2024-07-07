@@ -86,3 +86,14 @@ Interested in contributing? Great! Look at our `CONTRIBUTING.md` for guidelines 
 
 ## License
 Specify the license under which the project is made available.
+
+
+## Database Schema
+
+Below is the database schema diagram for the "blogch" system, showing all tables, relationships, and key constraints:
+
+![Database Schema]([url_to_image_in_repository](https://github.com/yourusername/yourrepository/blob/main/path/to/image.png
+))
+
+This diagram provides a visual understanding of the database structure, essential for both managing the database and developing new features.
+
