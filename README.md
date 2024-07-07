@@ -21,97 +21,68 @@
 - Frontend Developer
 - Quality Assurance Tester
 
+## Project Structure
+Below is the structure of the project which organizes the code, templates, and other items:
+
+blogch/
+│
+├── app/ # Main application package
+│ ├── init.py # Initializes Python package
+│ ├── main.py # Entry point to the FastAPI app
+│ ├── dependencies.py # Dependency-related functions
+│ ├── settings.py # Configuration and environment variables
+│ │
+│ ├── api/ # Web API logic
+│ │ ├── init.py
+│ │ ├── api.py # Routes and endpoints
+│ │ ├── crud.py # CRUD operations for database
+│ │ ├── schemas.py # Pydantic models for data validation
+│ │ └── security.py # Security operations, e.g., password hashing, token generation
+│ │
+│ ├── models/ # Database models
+│ │ ├── init.py
+│ │ ├── models.py # SQLAlchemy models
+│ │ └── base.py # Base class for models
+│ │
+│ ├── db/ # Database related modules
+│ │ ├── init.py
+│ │ ├── base_class.py # Base class for all models
+│ │ ├── session.py # Database session management
+│ │ └── init_db.py # Database initialization
+│ │
+│ └── templates/ # Templates for rendering (if not using a separate frontend)
+│ ├── index.html
+│ └── post.html
+│
+├── migrations/ # Database migrations
+│ ├── versions/ # Individual migration scripts
+│ └── env.py # Migration environment
+│
+├── tests/ # Test suite
+│ ├── init.py
+│ ├── test_config.py # Test configurations
+│ └── test_main.py # Test cases for your application
+│
+├── requirements.txt # Project dependencies
+└── README.md # Project documentation
+
+
 ## Requirements
-
-### Functional Requirements
-- Authentication system for the blog owner.
-- CRUD operations for blog posts and categories by the blog owner.
-- Viewing posts, liking posts, commenting on posts by readers.
-- Navigation through categories by readers.
-
-### Non-Functional Requirements
-- Usability: Intuitive interface for both readers and the blog owner.
-- Performance: Quick response times for all interactions within the blog.
-- Security: Effective security protocols to prevent unauthorized management access and ensure data integrity.
-
-## Use Cases
-
-### Core Use Cases
-
-#### Managing Categories
-- **Actor:** Blog Owner
-- **Description:** The blog owner can create, edit, and delete categories.
-- **Steps:**
-  1. Log in to the dashboard.
-  2. Navigate to the 'Manage Categories' section.
-  3. Perform actions such as adding a new category, editing an existing one, or deleting a category.
-
-#### Navigating Posts by Category
-- **Actor:** Reader
-- **Description:** Readers can view posts filtered by selected categories.
-- **Steps:**
-  1. Visit the blog homepage.
-  2. Select a category from the category list.
-  3. View posts associated with the chosen category.
-
-### Advanced Use Cases
-
-#### Viewing a Specific Blog Post
-- **Actor:** Reader
-- **Description:** Readers can view the details of a specific blog post.
-- **Steps:**
-  1. Navigate to the blog homepage or a category page.
-  2. Click on the title or thumbnail of a post.
-  3. View the full content of the post, including multimedia elements like images or videos.
-
-#### Liking a Blog Post
-- **Actor:** Reader
-- **Description:** Readers can express their appreciation for a post by liking it.
-- **Steps:**
-  1. While viewing a post, click the 'Like' button.
-  2. The system increments the like count and displays the updated count immediately.
-
-#### Editing a Blog Post
-- **Actor:** Blog Owner
-- **Description:** The blog owner edits an existing blog post to update or correct information.
-- **Steps:**
-  1. Log into the admin dashboard.
-  2. Select the post to edit from a list or by searching.
-  3. Update the content, tags, or associated images and save the changes.
-
-#### Deleting a Blog Post
-- **Actor:** Blog Owner
-- **Description:** The blog owner deletes a blog post that is no longer relevant or needed.
-- **Steps:**
-  1. Log into the admin dashboard.
-  2. Select the post to delete from a list or by searching.
-  3. Confirm deletion to remove the post permanently from the blog.
-
-#### Searching for Blog Posts
-- **Actor:** Reader
-- **Description:** Readers search for blog posts by keywords, tags, or categories.
-- **Steps:**
-  1. Use the search bar on the homepage or category pages.
-  2. Enter the search terms and submit the search.
-  3. View the list of posts that match the search criteria.
-
-#### Subscribing to Blog Updates
-- **Actor:** Reader
-- **Description:** Readers subscribe to receive notifications or emails when new posts are published.
-- **Steps:**
-  1. Navigate to the subscription area on the blog homepage.
-  2. Enter an email address and submit the subscription request.
-  3. Receive confirmation of subscription and future updates via email.
-
-#### Comment Moderation
-- **Actor:** Blog Owner
-- **Description:** The blog owner reviews and moderates comments to maintain quality and prevent spam.
-- **Steps:**
-  1. Log into the admin dashboard.
-  2. Navigate to the comment moderation section.
-  3. Approve, delete, or reply to comments as needed.
+Detailed information on project dependencies can be found in `requirements.txt`. It includes all necessary libraries to ensure proper environment setup.
 
 ## Functionality
 - **Category Management:** Allows the blog owner to organize posts into categories, enhancing navigational ease and content discoverability.
 - **Post Interactions for Readers:** Features like comments and likes to engage readers, alongside category-based navigation.
 - **Responsive Design:** Ensures the blog is functional and visually appealing on various devices.
+
+## Usage
+Instructions on how to run and use the application will be detailed under this section.
+
+## Development
+This section will provide guidelines for developers looking to contribute to the project, including setting up their development environment, running tests, and making pull requests.
+
+## Contributing
+Interested in contributing? Great! Look at our `CONTRIBUTING.md` for guidelines on how to make effective pull requests and participate in the development process.
+
+## License
+Specify the license under which the project is made available.
